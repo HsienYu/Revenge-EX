@@ -3,6 +3,7 @@
   <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/feiss/aframe-environment-component@master/dist/aframe-environment-component.min.js"></script>
   <body style="margin: 0px; overflow: hidden">
     <a-scene embedded arjs>
       <a-marker preset="hiro">
@@ -11,7 +12,7 @@
           rotation="0 0 0"
           scale="0.03 0.03 0.03"
           gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/HsienYu/Revenge-EX/main/assets/Laying.glb"
-          animation-mixer
+          animation-mixer="clip: *;"
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
